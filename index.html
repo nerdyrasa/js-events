@@ -6,16 +6,43 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <ul>
+  <ul id="grid">
     <li><img src="images/ylw.gif" alt="yellow"></li>
     <li><img src="images/org.gif" alt="orange"></li>
     <li><img src="images/ppl.gif" alt="purple"></li>
     <li><img src="images/blu.gif" alt="blue"></li>
-    <li><img src="images/pnk.gif" alt="pink"></li>
+    <li><img src="images/pnk.gif" alt="pink" id="pink"></li>
     <li><img src="images/grn.gif" alt="green"></li>
     <li><img src="images/ygr.gif" alt="ygreen"></li>
     <li><img src="images/gry.gif" alt="gray"></li>
     <li><img src="images/red.gif" alt="red"></li>
   </ul>
+
+<script>
+
+/*
+ Syntax:
+
+ document.addEventListener(event, function, useCapture)
+
+ useCapture	Optional. A Boolean value that specifies whether the event should be executed in the capturing or in the bubbling phase.
+
+ Possible values:
+ true - The event handler is executed in the capturing phase
+ false- Default. The event handler is executed in the bubbling phase
+
+ The useCapture parameter became optional in Firefox 6 and Opera 11.60 (has always been optional for Chrome, IE and Safari)
+
+*/
+
+
+  document.getElementById('grid').addEventListener('click', function(e) {
+    console.log(e.toElement.alt);
+  }, false);
+
+
+</script>
+
+
 </body>
 </html>
